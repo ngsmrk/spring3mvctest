@@ -2,11 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.ngsmrk.spring</groupId>
-    <artifactId>springmvctest</artifactId>
+    <artifactId>spring3mvctest</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>springmvctest Maven Webapp</name>
+    <name>spring3mvctest Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <properties>
+        <org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+    </properties>
     <repositories>
         <repository>
             <id>jboss-public-repository-group</id>
@@ -17,18 +20,18 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring</artifactId>
-            <version>2.5.6</version>
+            <artifactId>spring-core</artifactId>
+            <version>${org.springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>2.5.6</version>
+            <version>${org.springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>2.5.6</version>
+            <version>${org.springframework.version}</version>
         </dependency>
         <!-- testing -->
         <dependency>
@@ -40,7 +43,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>2.5.6</version>
+            <version>${org.springframework.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -77,7 +80,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>2.5.6</version>
+            <version>${org.springframework.version}</version>
         </dependency>
         <!-- Apache Commons Upload -->
         <dependency>
@@ -95,7 +98,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>2.5.6</version>
+            <version>${org.springframework.version}</version> 
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -164,7 +167,7 @@
     </dependencies>
     <!-- build config -->
     <build>
-        <finalName>springmvctest</finalName>
+        <finalName>spring3mvctest</finalName>
         <!--  define additional resources for testing - otherwise resources won't be found -->
         <testResources>
             <testResource>

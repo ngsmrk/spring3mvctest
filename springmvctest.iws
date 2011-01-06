@@ -16,10 +16,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.iws" afterPath="$PROJECT_DIR$/springmvctest.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring3mvctest.iws" afterPath="$PROJECT_DIR$/spring3mvctest.iws" />
     </list>
     <ignored path=".idea/workspace.xml" />
-    <ignored path="springmvctest.iws" />
+    <ignored path="spring3mvctest.iws" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="ClassPatternConfiguration">
@@ -36,7 +36,7 @@
     <option name="COMPILE_IN_BACKGROUND" value="false" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/springmvctest$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1291389931759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/spring3mvctest$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1291389931759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ngsmrk.*</FILTER>
     </SUITE>
   </component>
@@ -210,7 +210,7 @@
     <EjbView showMembers="false" autoscrollToSource="false" />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="springmvctest" />
+    <favorites_list name="spring3mvctest" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -401,39 +401,39 @@
     <subPane>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -447,15 +447,15 @@
       </PATH>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -469,15 +469,15 @@
       </PATH>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -503,15 +503,15 @@
       </PATH>
       <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -712,7 +712,7 @@
         <option name="PATTERN" value="org.ngsmrk.*" />
         <option name="ENABLED" value="true" />
       </pattern>
-      <module name="springmvctest" />
+      <module name="spring3mvctest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="" />

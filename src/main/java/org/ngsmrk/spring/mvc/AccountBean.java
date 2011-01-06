@@ -8,6 +8,10 @@ public class AccountBean implements Serializable {
 
     private final Account account;
 
+    public AccountBean() {
+        this.account = new Account();
+    }
+
     public AccountBean(Account account) {
         this.account = account;
     }

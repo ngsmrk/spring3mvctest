@@ -1,7 +1,10 @@
 As a developer I want to set up a webapp so that I can refresh my knowledge of Spring MVC
 Tasks:
+
+Change POM to get Spring 3.x version DONE
+Change test classes DONE
+
 DispatcherServlet DONE
-BeanNameUrlHandlerMapping DONE
 InternalResourceViewResolver DONE
 SimpleMappingExceptionResolver DONE
 Develop a formcontroller - onSubmit, referenceData, formBackingObject DONE
@@ -13,9 +16,11 @@ Create persistent class Account DONE
 Configure tests so that schema is created automatically DONE
 Create test data DONE
 Configure db connection for Tomcat NOT REQUIRED
-Add custom validators DONE
 test embedded tomcat with maven DONE
-Develop a wizardcontroller DONE
+
+MultiActionController DONE
+Develop a wizardcontroller
+Rework validators to use annotations
 
 Create GWT client
 Expose as restful services

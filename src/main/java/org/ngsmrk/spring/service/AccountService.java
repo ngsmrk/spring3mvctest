@@ -1,5 +1,6 @@
 package org.ngsmrk.spring.service;
 
+import java.util.Collection;
 import java.util.Map;
 
 public interface AccountService {
@@ -11,4 +12,8 @@ public interface AccountService {
     Account getAccount(long id);
 
     void updateAccount(Account account);
+
+    public Collection<Account> getAccounts();
+
+    public void delete(long id);
 }

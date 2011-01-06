@@ -4,54 +4,63 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.ngsmrk.spring.service.Account;
 import org.ngsmrk.spring.service.AccountService;
-import org.springframework.validation.BindException;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.SimpleFormController;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.support.SessionStatus;
 
-public class CreateAccountController extends SimpleFormController {
+@Controller
+@RequestMapping("/createaccount.htm")
+public class CreateAccountController {
 
     private final Log logger = LogFactory.getLog(getClass());
 
+    @Autowired
     private AccountService accountService;
 
     public CreateAccountController() {
         super();
     }
 
-    public void setAccountService(AccountService accountService) {
-        this.accountService = accountService;
-    }
-
-    @Override
-    protected Object formBackingObject(HttpServletRequest request) {
+    @RequestMapping(method = RequestMethod.GET)
+    public String setupForm(ModelMap model) {
 
         Account account = new Account();
         AccountBean accountBean = new AccountBean(account);
 
-        logger.info("Returning new account");
+        model.addAttribute("account", accountBean);
 
-        return accountBean;
+        return "account";
     }
 
-    @Override
-    protected ModelAndView onSubmit(HttpServletRequest request,
-                                    HttpServletResponse response, Object command, BindException errors)
+    @RequestMapping(method = RequestMethod.POST)
+    public String saveAccount(@ModelAttribute("account") AccountBean theAccount,
+            BindingResult result, SessionStatus status)
             throws Exception {
 
-        AccountBean theAccount = (AccountBean) command;
         logger.info("Processing account: " + theAccount.getAccountNumber());
+
+        AccountValidator validator = new AccountValidator();
+        validator.validate(theAccount, result);
+        if (result.hasErrors()) {
+            return "account";
+        }
 
         Account newAccount = theAccount.getAccount();
         accountService.createAccount(newAccount);
-        return new ModelAndView(this.getSuccessView(), "account", newAccount);
+
+        return "account-created";
     }
 
-    @Override
-    protected Map referenceData(HttpServletRequest request) throws Exception {
+    @ModelAttribute("bankName")
+    protected Map referenceData() throws Exception {
         final Map refData = accountService.getBanks();
 
         logger.info("Returning refdata: " + refData);

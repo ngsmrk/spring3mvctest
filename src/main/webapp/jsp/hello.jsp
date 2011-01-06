@@ -1,19 +1,13 @@
 <%@ include file="/jsp/include.jspf" %>
 
 <html>
-<head><title><fmt:message key="title"/></title></head>
+<head><title>Spring 3</title></head>
 <body>
-<h1><fmt:message key="heading"/></h1>
-
-<p>
-    <fmt:message key="greeting">
-        <fmt:param value="${now}"/>
-    </fmt:message>
-</p>
+<h1>Spring 3</h1>
 
 <p>
 Handling forms in Spring MVC<br/>
-Click here to start playing - <a href="createaccount.htm">SimpleFormController example</a>
+Click here to start playing - <a href="accounts.htm">SimpleFormController example</a>
 </p>
 
 <p>

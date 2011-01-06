@@ -1,18 +1,35 @@
 package org.ngsmrk.spring.service;
 
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import java.util.Collection;
+import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
-public class AccountDAO extends HibernateDaoSupport {
+@Repository("accountDao")
+public class AccountDAO {
+
+    @Autowired
+    private SessionFactory sessionFactory;
 
     public void createAccount(Account account) throws AccountCreationException {
-        getHibernateTemplate().save(account);
+        sessionFactory.getCurrentSession().save(account);
     }
 
     public Account getAccount(long id) {
-        return (Account) getHibernateTemplate().load(Account.class, id);
+        return (Account) sessionFactory.getCurrentSession().load(Account.class, id);
     }
 
     public void updateAccount(Account account) {
-        getHibernateTemplate().update(account);
+        sessionFactory.getCurrentSession().update(account);
+    }
+
+    Collection<Account> getAccounts() {
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Account.class);        
+        return criteria.list();
+    }
+
+    void delete(long id) {
+        sessionFactory.getCurrentSession().delete(getAccount(id));
     }
 }

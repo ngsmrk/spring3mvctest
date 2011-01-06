@@ -14,7 +14,7 @@ git config --global user.email you@example.com
 
 
 git remote -v (list remotes)
-git remote add origin ssh://myserver.com/var/git/myapp.git e.g.: git remote add origin git@github.com:ngsmrk/springmvctest.git
+git remote add origin ssh://myserver.com/var/git/myapp.git e.g.: git remote add origin git@github.com:ngsmrk/spring3mvctest.git
 git add <file>
 git rm <file>
 git checkout <file>

@@ -55,7 +55,7 @@
     <autodetection-disabled>
       <facet-type id="web">
         <modules>
-          <module name="springmvctest" />
+          <module name="spring3mvctest" />
         </modules>
       </facet-type>
     </autodetection-disabled>
@@ -661,7 +661,7 @@
     </group>
   </component>
   <component name="ProjectDetails">
-    <option name="projectName" value="springmvctest" />
+    <option name="projectName" value="spring3mvctest" />
   </component>
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
@@ -669,7 +669,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/springmvctest.iml" filepath="$PROJECT_DIR$/springmvctest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring3mvctest.iml" filepath="$PROJECT_DIR$/spring3mvctest.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" />

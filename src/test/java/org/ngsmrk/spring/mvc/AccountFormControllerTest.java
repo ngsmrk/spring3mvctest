@@ -9,8 +9,8 @@ import static org.mockito.Mockito.when;
 import org.ngsmrk.spring.service.Account;
 import org.ngsmrk.spring.service.AccountService;
 import org.springframework.mock.web.MockHttpServletRequest;
-import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindException;
 
 public class AccountFormControllerTest {
 
@@ -36,21 +36,33 @@ public class AccountFormControllerTest {
     }
 
     @Test
-    public void testOnSubmit() throws Exception {
+    public void testSaveAccount() throws Exception {
 
         AccountBean account = new AccountBean(new Account());
-        ModelAndView modelAndView = controller.onSubmit(null, null, account, null);
-        assertViewName(modelAndView, "success");
+        account.setAccountNumber("1111");
+        BindException errors = new BindException(account, "account");
+        String viewName = controller.saveAccount(account, errors, null);
+        assertEquals("success", viewName);
+    }
 
-        // TODO check model attributes
+    @Test
+    public void testAccountValidation() throws Exception {
+
+        AccountBean account = new AccountBean(new Account());
+        BindException errors = new BindException(account, "account");
+        String viewName = controller.saveAccount(account, errors, null);
+        assertEquals("account", viewName);
     }
 
     @Test
     public void testFormBackingObject() throws Exception {
 
-        MockHttpServletRequest request = new MockHttpServletRequest();
-        request.setParameter("accountID", "111");
-        AccountBean account = (AccountBean) controller.formBackingObject(request);
-        assertEquals(new Long(111), account.getId());
+        Long accountID = new Long(111);
+        ModelMap model = new ModelMap();
+        String viewName = controller.setupForm(accountID, model);
+        assertEquals("account", viewName);
+
+        AccountBean account = (AccountBean) model.get("account");
+        assertEquals(accountID, account.getId());
     }
 }
