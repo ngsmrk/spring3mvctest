@@ -1,0 +1,3 @@
+java -cp lib\hsqldb.jar org.hsqldb.Server -database test (start up db server)
+
+java -cp lib\hsqldb.jar org.hsqldb.util.DatabaseManagerSwing (start admin tool)

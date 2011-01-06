@@ -1,0 +1,24 @@
+As a developer I want to set up a webapp so that I can refresh my knowledge of Spring MVC
+Tasks:
+DispatcherServlet DONE
+BeanNameUrlHandlerMapping DONE
+InternalResourceViewResolver DONE
+SimpleMappingExceptionResolver DONE
+Develop a formcontroller - onSubmit, referenceData, formBackingObject DONE
+Split up Spring configuration DONE
+
+Add config for ds, tx, services DONE
+Set up HSQLDB schema DONE
+Create persistent class Account DONE
+Configure tests so that schema is created automatically DONE
+Create test data DONE
+Configure db connection for Tomcat NOT REQUIRED
+Add custom validators DONE
+test embedded tomcat with maven DONE
+Develop a wizardcontroller DONE
+
+Create GWT client
+Expose as restful services
+Expose as web services
+
+
