@@ -19,7 +19,7 @@ Configure db connection for Tomcat NOT REQUIRED
 test embedded tomcat with maven DONE
 
 MultiActionController DONE
-Develop a wizardcontroller
+Develop a wizardcontroller DONE
 Rework validators to use annotations
 
 Create GWT client

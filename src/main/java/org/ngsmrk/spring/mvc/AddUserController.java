@@ -4,60 +4,119 @@
  */
 package org.ngsmrk.spring.mvc;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.springframework.validation.BindException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractWizardFormController;
 import org.springframework.web.servlet.view.RedirectView;
 
 /**
  *
  * @author Angus
  */
-public class AddUserController extends AbstractWizardFormController {
+@Controller
+@RequestMapping("/adduser.htm")
+@SessionAttributes({"userForm", "pageNum"})
+public class AddUserController {
+
+    @Autowired
+    private UserValidator validator;
 
     public AddUserController() {
-        setCommandName("userForm");
     }
 
-    @Override
-    protected Object formBackingObject(HttpServletRequest request)
+    @RequestMapping(method = RequestMethod.GET)
+    public String setupForm(ModelMap map) throws Exception {
+
+        map.addAttribute("userForm", new User());
+        map.addAttribute("pageNum", 1);
+
+        return "userwizard/page1form";
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    // the order of the parameters is important - in this case the BindingResult is for the user
+    public ModelAndView processSubmit(@ModelAttribute("userForm") User theUser,
+            BindingResult result, @ModelAttribute(value = "pageNum")
+    int pageNum, @RequestParam(value = "_action")
+    String action, SessionStatus status)
             throws Exception {
 
-        return new User();
+        if ("Cancel".equals(action)) {
+            return processCancel();
+        } else if ("Finish".equals(action)) {
+            return processFinish(theUser, result);
+        } else if ("Previous".equals(action)) {
+            return goBackOnePage(theUser, pageNum);
+        } else if ("Next".equals(action)) {
+            return processPageSubmission(theUser, result, pageNum);
+        } else {
+            throw new IllegalArgumentException("Invalid action: " + action);
+        }
     }
 
-    @Override
-    protected ModelAndView processFinish(HttpServletRequest hsr, HttpServletResponse hsr1, Object o, BindException be) throws Exception {
+    private ModelAndView processPageSubmission(User theUser, BindingResult result, int pageNum) {
+        validatePage(theUser, result, pageNum);
 
-        User user = (User) o;
+       if (result.hasErrors()) {
+            return getPageView(pageNum, theUser);
+        }
+
+        else return goForwardOnePage(theUser, pageNum);
+    }
+
+    private ModelAndView getPageView(int newPageNum, User theUser) {
+        final ModelAndView modelAndView = new ModelAndView("userwizard/page" + newPageNum + "form");
+        modelAndView.addObject("pageNum", newPageNum);
+        modelAndView.addObject("userForm", theUser);
+
+        return modelAndView;
+    }
+
+    private ModelAndView processFinish(User user, BindingResult errors) throws Exception {
+
+        validator.validatePage3Form(user, errors);
+        if (errors.hasErrors()) {
+            return new ModelAndView("userwizard/page3form");
+        }
 
         return new ModelAndView("userwizard/resultform", "user", user);
     }
 
-    @Override
-    protected ModelAndView processCancel(HttpServletRequest hsr, HttpServletResponse hsr1, Object o, BindException be) throws Exception {
-        return new ModelAndView(new RedirectView("hello.htm"));
+    private ModelAndView processCancel() throws Exception {
+        return new ModelAndView(new RedirectView("/", true));
     }
 
-    @Override
-    protected void validatePage(Object command, Errors errors, int page) {
+    private void validatePage(User user, Errors errors, int page) {
 
-        UserValidator validator = (UserValidator) getValidator();
-
-        //page is 0-indexed
+        //page is 1-indexed
         switch (page) {
-            case 0: //if page 1 , go validate with validatePage1Form
-                validator.validatePage1Form(command, errors);
+            case 1: //if page 1 , go validate with validatePage1Form
+                validator.validatePage1Form(user, errors);
                 break;
-            case 1: //if page 2 , go validate with validatePage2Form
-                validator.validatePage2Form(command, errors);
-                break;
-            case 2: //if page 3 , go validate with validatePage3Form
-                validator.validatePage3Form(command, errors);
+            case 2: //if page 2 , go validate with validatePage2Form
+                validator.validatePage2Form(user, errors);
                 break;
         }
+    }
+
+    private ModelAndView goBackOnePage(User theUser, int pageNum) {
+
+        int newPageNum = pageNum - 1;
+        return getPageView(newPageNum, theUser);
+    }
+
+    private ModelAndView goForwardOnePage(User theUser, int pageNum) {
+
+        int newPageNum = pageNum + 1;
+        return getPageView(newPageNum, theUser);
     }
 }

@@ -1,3 +1,4 @@
+<%@ include file="/jsp/include.jspf" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-<h2>Page 2</h2>
+<h2>Page 2: <c:out value="${pageNum}"/></h2>
 
 <form:form method="POST" commandName="userForm">
 <form:errors path="*" cssClass="errorblock" element="div"/>
@@ -29,9 +30,9 @@
 <tr>
 <tr>
 <td colspan="3">
-<input type="submit" value="Previous" name="_target0" />
-<input type="submit" value="Next" name="_target2" />
-<input type="submit" value="Cancel" name="_cancel" />
+<input type="submit" value="Previous" name="_action" />
+<input type="submit" value="Next" name="_action" />
+<input type="submit" value="Cancel" name="_action" />
 </td>
 </tr>
 </table>
