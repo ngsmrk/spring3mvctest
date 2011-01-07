@@ -20,7 +20,7 @@ test embedded tomcat with maven DONE
 
 MultiActionController DONE
 Develop a wizardcontroller DONE
-Rework validators to use annotations
+Rework validators to use annotations DONE
 
 Create GWT client
 Expose as restful services

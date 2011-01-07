@@ -8,7 +8,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import org.ngsmrk.spring.service.Account;
 import org.ngsmrk.spring.service.AccountService;
-import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindException;
 

@@ -16,6 +16,11 @@ Click here to start playing - <a href="adduser.htm">AbstractWizardFormController
 </p>
 
 <p>
+JSR 303 validation<br/>
+Click here to start playing - <a href="beans.htm">Annotation based validation example</a>
+</p>
+
+<p>
     <%@ include file="/jsp/diagnostic.jspf" %>
 </p>
 </body>

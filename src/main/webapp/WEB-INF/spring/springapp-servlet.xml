@@ -21,6 +21,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
     <tx:annotation-driven />
 
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
     <!-- Open Session In View Interceptor -->
     <mvc:interceptors>
         <bean class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
