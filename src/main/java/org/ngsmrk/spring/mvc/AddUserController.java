@@ -4,11 +4,16 @@
  */
 package org.ngsmrk.spring.mvc;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,12 +47,17 @@ public class AddUserController {
         return "userwizard/page1form";
     }
 
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     // the order of the parameters is important - in this case the BindingResult is for the user
     public ModelAndView processSubmit(@ModelAttribute("userForm") User theUser,
-            BindingResult result, @ModelAttribute(value = "pageNum")
-    int pageNum, @RequestParam(value = "_action")
-    String action, SessionStatus status)
+            BindingResult result, @ModelAttribute(value = "pageNum") int pageNum, @RequestParam(value = "_action") String action, SessionStatus status)
             throws Exception {
 
         if ("Cancel".equals(action)) {
@@ -66,11 +76,11 @@ public class AddUserController {
     private ModelAndView processPageSubmission(User theUser, BindingResult result, int pageNum) {
         validatePage(theUser, result, pageNum);
 
-       if (result.hasErrors()) {
+        if (result.hasErrors()) {
             return getPageView(pageNum, theUser);
+        } else {
+            return goForwardOnePage(theUser, pageNum);
         }
-
-        else return goForwardOnePage(theUser, pageNum);
     }
 
     private ModelAndView getPageView(int newPageNum, User theUser) {

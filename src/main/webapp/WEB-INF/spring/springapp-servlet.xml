@@ -30,8 +30,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         </bean>
     </mvc:interceptors>
 
-    <bean id="userValidator" class="org.ngsmrk.spring.mvc.UserValidator"/>
-
     <!--  add support for file uploads -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
