@@ -17,6 +17,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.iws" afterPath="$PROJECT_DIR$/springmvctest.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.ipr" afterPath="$PROJECT_DIR$/springmvctest.ipr" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="spring3mvctest.iws" />
@@ -356,7 +357,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="springmvctest" />
+          <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -403,9 +404,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
