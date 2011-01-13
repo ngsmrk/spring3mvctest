@@ -17,8 +17,6 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.iws" afterPath="$PROJECT_DIR$/springmvctest.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.iml" afterPath="$PROJECT_DIR$/springmvctest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.ipr" afterPath="$PROJECT_DIR$/springmvctest.ipr" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="spring3mvctest.iws" />
@@ -228,22 +226,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeanController.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BeanController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/BeanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
+            <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.70124483">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="70" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.11065007">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -414,9 +403,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -628,7 +617,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="7" side_tool="false" />
@@ -647,7 +636,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.66311586" order="1" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10704023" sideWeight="0.66311586" order="3" side_tool="false" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36422414" sideWeight="0.66311586" order="0" side_tool="false" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36422414" sideWeight="0.66311586" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" />
@@ -825,6 +814,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="70" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.11065007">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/AddUserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="13" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
@@ -834,17 +830,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/BeanController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
+        <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.70124483">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="70" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.11065007">
-          <folding />
         </state>
       </provider>
     </entry>
