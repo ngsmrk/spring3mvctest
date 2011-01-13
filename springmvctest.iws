@@ -18,6 +18,7 @@
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.iws" afterPath="$PROJECT_DIR$/springmvctest.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springmvctest.ipr" afterPath="$PROJECT_DIR$/springmvctest.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring3mvctest.iml" afterPath="$PROJECT_DIR$/spring3mvctest.iml" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="spring3mvctest.iws" />
@@ -217,28 +218,7 @@
     <subPane subId="spring3mvctest" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AddUserController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/AddUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BeanController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/BeanController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.70124483">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -360,6 +340,24 @@
           <option name="myItemId" value="spring3mvctest" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="spring3mvctest" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="spring3mvctest" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="spring3mvctest" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -389,16 +387,16 @@
     <view id="ClasspathPane" />
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
     <property name="options.lastSelected" value="MavenSettings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hello" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.47243345" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
@@ -815,10 +813,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/BeanController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="70" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.11065007">
-          <folding />
+        <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -829,12 +829,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ngsmrk/spring/mvc/BeanController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="59" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.70124483">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="149" column="70" selection-start="5462" selection-end="5462" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
