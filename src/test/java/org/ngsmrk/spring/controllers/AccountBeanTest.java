@@ -1,8 +1,9 @@
-package org.ngsmrk.spring.mvc;
+package org.ngsmrk.spring.controllers;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 import org.ngsmrk.spring.service.Account;
+import org.ngsmrk.spring.mvc.AccountBean;
 
 public class AccountBeanTest {
 
