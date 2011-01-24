@@ -11,7 +11,7 @@ import org.mockito.Mockito;
  * @author Initial: amark
  * @version 1.0
  */
-public class MyTest {
+public class SpyTest {
 
     private LegacyHelper helper;
 
