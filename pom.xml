@@ -194,6 +194,10 @@
                 <includes>
                     <include>**/*.xml</include>
                     <include>**/*.properties</include>
+
+                    <!-- required for Concordion -->
+                    <include>**/*.html</include>
+                    <include>**/*.css</include>
                 </includes>
             </testResource>
         </testResources>
@@ -203,11 +207,24 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-
                     <source>1.6</source>
                     <target>1.6</target>
-
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <systemProperties>
+                        <property>
+                          <name>concordion.output.dir</name>
+                          <value>target/concordion</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+                <executions>
+                    
+                </executions>
             </plugin>
         </plugins>
     </build>

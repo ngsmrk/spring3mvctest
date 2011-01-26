@@ -22,6 +22,10 @@ MultiActionController DONE
 Develop a wizardcontroller DONE
 Rework validators to use annotations DONE
 
+Add concordion tests DONE
+Add concordion and selenium tests
+Run concordion as integration tests
+
 Create GWT client
 Expose as restful services
 Expose as web services

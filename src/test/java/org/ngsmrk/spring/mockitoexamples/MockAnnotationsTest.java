@@ -73,11 +73,6 @@ public class MockAnnotationsTest {
     }
 
     @Test
-    public void testMethodCallVerification() throws Exception {
-        fail();
-    }
-
-    @Test
     public void testUseAnswer() throws Exception {
 
         Mockito.when(theCalculator.calculate(10, 20)).thenAnswer(new Answer<Integer>() {

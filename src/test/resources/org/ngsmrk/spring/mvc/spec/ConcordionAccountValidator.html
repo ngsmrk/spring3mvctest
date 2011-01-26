@@ -1,0 +1,30 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<link href="../../../../concordion.css" rel="stylesheet" type="text/css" />
+<body>
+
+    <h1>Account creation</h1>
+
+    <p>
+        An account must have an account number.
+    </p>
+
+    <div class="example">
+
+                <h3>Validation</h3>
+
+        <p>
+            When a user enters an account number <b concordion:set="#accountNumber"></b>
+            with <b concordion:assertEquals="#accountNumber.length()">0</b> characters
+            the error will be:
+            <b concordion:assertEquals="testAccountNumber(#accountNumber)">Account number must be supplied</b>
+        </p>
+
+        <p>
+            When a user enters an account number <b concordion:set="#accountNumber">1111</b>
+            there will be <b concordion:assertNull="testAccountNumber(#accountNumber)">no error</b>            
+        </p>
+
+    </div>
+
+</body>
+</html>
