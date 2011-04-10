@@ -39,6 +39,44 @@ public class SpyTest {
         Param mockPolicy = Mockito.mock(Param.class);
         assertEquals("bar", helper.callUrl(mockPolicy));
     }
+	
+	@Test
+	public void testMockingVoidMethod() {
+	
+		class BaseService {
+		
+		    public void save() {
+		        validate();
+		    }
+			
+			protected void validate() {
+			}
+		}
+
+		class ChildService extends BaseService {
+		    public void save() {
+		        super.save();
+		        load();
+		    }
+			
+			void load() {
+			}
+		}
+
+	    ChildService spy = Mockito.spy(new ChildService());
+
+	    // Prevent/stub logic in super.save()
+	    Mockito.doNothing().when((BaseService)spy).validate();
+
+	    // When
+	    spy.save();
+
+	    // Then
+		// methods to be verified cannot be private
+	    Mockito.verify(spy).load();	
+	    Mockito.verify(spy).save();
+	    Mockito.verify(spy).validate();		
+	}
 
     class LegacyHelper {
 

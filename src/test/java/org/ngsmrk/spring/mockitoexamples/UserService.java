@@ -23,7 +23,11 @@ public class UserService {
             return -1;
         }
     }
-
+ 
+	public int getUserCount(String action) {
+		return 0;
+	}
+	
     public void save(String name) {
         userManager.save(name);
     }

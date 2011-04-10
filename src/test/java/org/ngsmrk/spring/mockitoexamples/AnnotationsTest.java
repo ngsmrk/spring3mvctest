@@ -17,7 +17,7 @@ import org.mockito.stubbing.Answer;
  * @author Initial: amark
  * @version 1.0
  */
-public class MockAnnotationsTest {
+public class AnnotationsTest {
 
     @Mock
     private Calculator theCalculator;
